@@ -8,7 +8,7 @@ description: An enhanced WordPress gallery that is responsive
 */
 
 /*set up our constants*/
-define('EIG_VER', '001');
+define('EIG_VER', '002');
 define('EIG_TRANS_VER', '001');
 define('EIG_DIR', WP_PLUGIN_DIR.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('EIG_URL', WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
