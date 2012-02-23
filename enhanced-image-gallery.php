@@ -53,12 +53,12 @@ class EIG_Start {
 	
 	function _register_js()
 	{
-		wp_register_script( 'eig-js', EIG_JS_URL . '/eig-js.js', array('jquery'), EIG_VER , true );
+		wp_register_script( 'eig-js', EIG_JS_URL . '/eig.js', array('jquery'), EIG_VER , true );
 	} // end js_setup
 	
         function _register_css()
 	{
-		wp_register_style('eig-css', EIG_CSS_URL.'/eig-style.css', '', EIG_VER, 'all');
+		wp_register_style('eig-css', EIG_CSS_URL.'/eig.css', '', EIG_VER, 'all');
         } // end css_setup
         
         function _print_js()
