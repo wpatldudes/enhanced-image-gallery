@@ -44,6 +44,18 @@ class EIG_Start {
 		require_once (EIG_LIB_DIR . '/widgets.php');/*get our custom widgets*/ 
 		require_once (EIG_LIB_DIR . '/shortcodes.php');/*get our short-codes functions*/ 
 		
+		if(isset($_GET['eig'])) {
+			$page = $_GET['page'];
+			$args = array( 'posts_per_page' => 10, 'offset' => (10 * ($page - 1)) );
+			$the_query = new WP_Query( $args );
+
+			// The Loop
+			while ( $the_query->have_posts() ) : $the_query->the_post();
+				get_template_part( 'content', get_post_format() );
+			endwhile;
+			exit;
+		}
+		
 	} // end EIG_init
 
 	function _admin_init()
